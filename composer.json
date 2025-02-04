@@ -1,5 +1,5 @@
 {
-    "name": "2amigos/yii2-tinymce-widget",
+    "name": "erida34/yii2-tinymce-widget",
     "description": "TinyMCE widget for Yii2.",
     "type": "yii2-extension",
     "keywords": [
@@ -9,7 +9,8 @@
         "yii 2",
         "extension",
         "widget",
-        "tinymce"
+        "tinymce",
+        "Erida34"
     ],
     "homepage": "http://yiiwheels.com/extension/tinymce-widget",
     "license": "BSD-3-Clause",

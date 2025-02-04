@@ -78,6 +78,12 @@ class TinyMce extends InputWidget
         if ($this->triggerSaveOnBeforeValidateForm) {
             $js[] = "$('#{$id}').parents('form').on('beforeValidate', function() { tinymce.triggerSave(); });";
         }
+        $js[] = <<<JS
+            $(document).ajaxSuccess(function(event, xhr, settings) {
+                tinymce.remove("#$id"); // Удаляем старые экземпляры TinyMCE
+                tinymce.init($options); // Инициализируем TinyMCE заново
+            });
+        JS;
         $view->registerJs(implode("\n", $js));
     }
 }
